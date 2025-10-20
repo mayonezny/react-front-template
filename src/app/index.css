@@ -163,6 +163,12 @@ html,
 body,
 #root {
   height: 100%;
+  width: 100%;
+}
+
+#root{
+  width: 100dvw;
+  height: 100dvh;
 }
 
 html {
@@ -172,7 +178,7 @@ html {
   hanging-punctuation: first last;
 }
 
-body {
+body{
   margin: 0;
   font-family:
     system-ui,
@@ -185,8 +191,8 @@ body {
     'Apple Color Emoji',
     'Segoe UI Emoji';
   line-height: 1.5;
-  background: #fff;
-  color: #111;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 img,

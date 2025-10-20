@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './HomePage.scss';
 
 export const HomePage = () => {
   const [count, setCount] = useState(0);
