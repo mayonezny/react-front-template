@@ -6,7 +6,7 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './router';
 import './index.css'; // если используешь scss
 
-import { store } from './store';
+import { store } from '../redux-rtk';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
