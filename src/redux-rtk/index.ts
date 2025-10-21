@@ -1,15 +1,22 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+// import authReducer from './auth/authSlice';
+// import loaderReducer from './loader/loaderSlice';
+// import billsReducer from './bill/billSlice';
+// import historyReducer from './history/historySlice';
+// import lobbyReducer from './lobby/lobbySlice';
 
-// сюда импортируешь редьюсеры
-// import todosReducer from './todos/slice';
-
-export const store = configureStore({
-  reducer: {
-    // todos: todosReducer,
-  },
-  // middleware: (getDefault) => getDefault().concat(api.middleware), // если потом подключишь RTK Query
+export const rootReducer = combineReducers({
+  // authReducer,
+  // loaderReducer,
+  // billsReducer,
+  // historyReducer,
+  // lobbyReducer,
 });
+export const setupStore = () =>
+  configureStore({
+    reducer: rootReducer,
+  });
 
-// типы для хуков
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore['dispatch'];
+export type RootState = ReturnType<typeof rootReducer>;
