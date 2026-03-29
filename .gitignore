@@ -1,4 +1,29 @@
-# Logs
+# ─── Dependencies ────────────────────────────────────────────────────────────
+node_modules
+
+# ─── Build output ────────────────────────────────────────────────────────────
+dist
+dist-ssr
+build
+
+# ─── Environment files ───────────────────────────────────────────────────────
+# Commit .env.example ONLY — never commit actual secrets
+.env
+.env.local
+.env.*.local
+# .env.development and .env.production are committed first time as they contain no secrets
+# (only non-sensitive defaults). Add them here if your env files contain secrets.
+
+# ─── Test output ─────────────────────────────────────────────────────────────
+coverage
+playwright-report
+test-results
+blob-report
+
+# ─── TypeScript build cache ──────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
 logs
 *.log
 npm-debug.log*
@@ -7,17 +32,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-!.vscode/extensions.json
+# ─── Editor / OS ────────────────────────────────────────────────────────────
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Keep VS Code settings (helpful for teams), but ignore local workspace settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json

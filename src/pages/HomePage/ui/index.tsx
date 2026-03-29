@@ -1,23 +1,41 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './HomePage.scss';
 
-export const HomePage = () => {
-  const [count, setCount] = useState(0);
-  console.log('ivan');
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" />
-        <a href="https://react.dev" target="_blank" />
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
-  );
-};
+export const HomePage = () => (
+  <div className="home-page">
+    <h1 className="home-page__title">React Frontend Template</h1>
+    <p className="home-page__desc">
+      A production-ready starter with TanStack Query, Zustand, and Feature Sliced Design.
+    </p>
+    <div className="home-page__links">
+      <Link to="/demo" className="home-page__link home-page__link--primary">
+        Open Demo →
+      </Link>
+      <a
+        href="https://feature-sliced.design/"
+        target="_blank"
+        rel="noreferrer"
+        className="home-page__link"
+      >
+        FSD Docs
+      </a>
+      <a
+        href="https://tanstack.com/query/latest"
+        target="_blank"
+        rel="noreferrer"
+        className="home-page__link"
+      >
+        TanStack Query
+      </a>
+      <a
+        href="https://zustand.docs.pmnd.rs/"
+        target="_blank"
+        rel="noreferrer"
+        className="home-page__link"
+      >
+        Zustand
+      </a>
+    </div>
+  </div>
+);
