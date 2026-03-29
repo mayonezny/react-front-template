@@ -11,8 +11,8 @@ build
 .env
 .env.local
 .env.*.local
-# .env.development and .env.production are committed first time as they contain no secrets
-# (only non-sensitive defaults). Add them here if your env files contain secrets.
+.env.development
+.env.production
 
 # ─── Test output ─────────────────────────────────────────────────────────────
 coverage
